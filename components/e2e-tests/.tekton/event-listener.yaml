@@ -1,7 +1,7 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
 metadata:
-  name: gitops-service-cluster-agent
+  name: e2e-tests-cluster-agent
 spec:
   serviceAccountName: e2e-tests-pipeline
   triggers:
