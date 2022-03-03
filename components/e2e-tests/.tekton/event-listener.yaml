@@ -1,7 +1,7 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
 metadata:
-  name: e2e-tests-cluster-agent
+  name: e2e-tests
 spec:
   serviceAccountName: e2e-tests-pipeline
   triggers:
@@ -9,4 +9,4 @@ spec:
         - kind: ClusterTriggerBinding
           ref: github-push
       template:
-        ref: gitops-service-cluster-agent
+        ref: e2e-tests-trigger-template
