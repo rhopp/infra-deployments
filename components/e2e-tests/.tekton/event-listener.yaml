@@ -3,7 +3,7 @@ kind: EventListener
 metadata:
   name: e2e-tests
 spec:
-  serviceAccountName: e2e-tests-pipeline
+  serviceAccountName: pipeline
   triggers:
     - bindings:
         - kind: ClusterTriggerBinding
