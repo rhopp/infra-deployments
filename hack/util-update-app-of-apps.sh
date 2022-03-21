@@ -10,6 +10,7 @@
 # references to the forked repo.
 # note, if accidental merges are accepted in the development directory, they will not affect staging. 
 
+set -x
 ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"/..
 MANIFEST=$ROOT/argo-cd-apps/app-of-apps/all-applications-staging.yaml
 GITURL=$1
@@ -37,3 +38,4 @@ yq  e "$PATCHOVERLAY" $MANIFEST | \
  yq  e "$PATCHBRANCH" - | \
  kubectl apply -f -
  
+ set +x
