@@ -10,8 +10,8 @@ export APPLICATION_NAMESPACE="openshift-gitops"
 export APPLICATION_NAME="all-components-staging"
 
 export TEST_BRANCH_ID=$(date +%s)
-export MY_GIT_FORK_REMOTE="qe"
-export MY_GITHUB_ORG="redhat-appstudio-qe"
+export MY_GIT_FORK_REMOTE="rhopp-script"
+export MY_GITHUB_ORG="rhopp"
 export MY_GITHUB_TOKEN="${GITHUB_TOKEN}"
 export E2E_APPLICATIONS_NAMESPACE=appstudio-e2e-test
 
