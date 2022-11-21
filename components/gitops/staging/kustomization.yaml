@@ -55,8 +55,8 @@ resources:
 
 images:
   - name: \${COMMON_IMAGE}
-    newName: quay.io/redhat-appstudio/gitops-service
-    newTag: d868aef2b5db0f38ca4d6129bf204ee9561df728
+    newName: quay.io/rhopp/gitops-service
+    newTag: f6625373d3488a0d2699427963251085d48882f7
 
 # Replace ${ARGO_CD_NAMESPACE}
 patches:
