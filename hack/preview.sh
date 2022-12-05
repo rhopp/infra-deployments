@@ -34,7 +34,7 @@ git checkout -b $PREVIEW_BRANCH
 
 # patch argoCD applications to point to your fork
 oc kustomize $ROOT/argo-cd-apps/overlays/development | yq e "select(.spec.source.repoURL==\"https://github.com/redhat-appstudio/infra-deployments.git\")
-  | del(.spec.destination, .spec.syncPolicy, .spec.project, .spec.source.path, spec.namespace)
+  | del(.spec.destination, .spec.syncPolicy, .spec.project, .spec.source.path, .spec.namespace)
   | .spec.source.repoURL=\"$MY_GIT_REPO_URL\"
   | .spec.source.targetRevision=\"$PREVIEW_BRANCH\"
   | .metadata.finalizers=[\"resources-finalizer.argocd.argoproj.io\"]" > $ROOT/argo-cd-apps/overlays/development/repo-overlay.yaml
