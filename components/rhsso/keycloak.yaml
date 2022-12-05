@@ -2,7 +2,6 @@ apiVersion: keycloak.org/v1alpha1
 kind: Keycloak
 metadata:
   name: appstudio-rhsso
-  namespace: appstudio-sso
 spec:
   externalAccess:
     enabled: true
