@@ -1,0 +1,179 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: application-api
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appstudio-sso
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: build-service
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: build-templates
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-registration
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: enterprise-contract
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitops
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: has
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: integration
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jvm-build-service
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pipeline-service
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: release
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: shared-resources
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spi
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spi-vault
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  source:
+    repoURL: https://github.com/rhopp/infra-deployments.git
+    targetRevision: preview-preview-RHDP-420-installToolchain
