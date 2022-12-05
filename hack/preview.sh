@@ -39,8 +39,6 @@ oc kustomize $ROOT/argo-cd-apps/overlays/development | yq e "select(.spec.source
   | .spec.source.targetRevision=\"$PREVIEW_BRANCH\"
   | .metadata.finalizers=[\"resources-finalizer.argocd.argoproj.io\"]" > $ROOT/argo-cd-apps/overlays/development/repo-overlay.yaml
 
-# patch sso to point to your fork
-yq e ".spec.source.repoURL=\"$MY_GIT_REPO_URL\" | .spec.source.targetRevision=\"$PREVIEW_BRANCH\"" $ROOT/rhsso
 
 # delete argoCD applications which are not in DEPLOY_ONLY env var if it's set
 if [ -n "$DEPLOY_ONLY" ]; then
